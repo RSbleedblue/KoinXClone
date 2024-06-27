@@ -4,17 +4,15 @@ import { setType } from "../../Redux/Slices/InvestmentTypeSlice";
 import { TiTick } from "react-icons/ti";
 
 const TaxInputs = () => {
-    const [purchasePrice, setPurchasePrice] = useState(0);
-    const [salesPrice, setSalesPrice] = useState(0);
-    const [expenses, setExpenses] = useState(0);
-    const [capitalGains, setCapitalGains] = useState(0);
-    const [discountGains, setDiscountGains] = useState(0);
-    const [netCapital, setNetCapital] = useState(0);
-    const [taxToPay, setTaxToPay] = useState(0);
-    const [annualIncome, setAnnualIncome] = useState('45,001 - $120,000');
+    const [purchasePrice, setPurchasePrice] = useState();
+    const [salesPrice, setSalesPrice] = useState();
+    const [expenses, setExpenses] = useState();
+    const [capitalGains, setCapitalGains] = useState();
+    const [discountGains, setDiscountGains] = useState();
+    const [netCapital, setNetCapital] = useState();
+    const [taxToPay, setTaxToPay] = useState();
+    const [annualIncome, setAnnualIncome] = useState('0 - $18,200');
 
-    const investmentType = useSelector((state) => state.investment.type);
-    const dispatch = useDispatch();
 
     const incomeBrackets = [
         { label: '0 - $18,200', rate: 0, base: 0 },
@@ -28,9 +26,16 @@ const TaxInputs = () => {
         const bracket = incomeBrackets.find(bracket => bracket.label === annualIncome);
         return bracket ? bracket : incomeBrackets[2];
     };
+    const investmentType = useSelector((state) => state.investment.type);
+    const dispatch = useDispatch();
 
+    console.log(investmentType);
     useEffect(() => {
         const valueOfCapitalGains = salesPrice - purchasePrice - expenses;
+        if (!valueOfCapitalGains || valueOfCapitalGains < 0) {
+            setCapitalGains(0);
+            return
+        }
         setCapitalGains(valueOfCapitalGains);
     }, [purchasePrice, salesPrice, expenses]);
 

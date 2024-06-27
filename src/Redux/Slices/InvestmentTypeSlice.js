@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const Investment = createSlice({
     name: "investment",
     initialState:{
-        type:"long-term",
+        type:"Short Term",
     },
     reducers:{
         setType(state,action){
