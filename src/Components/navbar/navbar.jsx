@@ -11,10 +11,11 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='flex w-full justify-between items-center shadow-sm bg-white p-6'>
+            <div className='flex w-full justify-center items-center shadow-sm bg-white p-6'>
                 <div className='w-full max-w-screen-xl flex justify-between items-center'>
                     <img src={logo} className='h-6'/>
-                    <div className='hidden md:flex items-center gap-20 text-sm font-semibold'>
+                    <div className='flex items-center gap-10'>
+                    <div className='hidden md:flex items-center gap-10 text-sm font-semibold'>
                         <p>Features</p>
                         <p>Exchanges</p>
                         <p>How it Works?</p>
@@ -32,6 +33,7 @@ const Navbar = () => {
                         <div className='border border-solid p-2 border-KoinXBlue text-sm font-semibold md:w-24 ml-2 flex items-center justify-center'>
                             <button className='text-KoinXBlue'>Sign up</button>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

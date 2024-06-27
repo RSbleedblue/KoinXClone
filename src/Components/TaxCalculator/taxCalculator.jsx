@@ -12,7 +12,7 @@ const TaxCalculator = () => {
     ];
 
     return (
-        <div className="ml-4 md:ml-10 p-6 w-full md:w-[55%] flex flex-col items-center justify-center bg-white rounded-2xl">
+        <div className="ml-4 md:ml-10 p-6 w-full md:w-[55%] flex flex-col items-center bg-white rounded-2xl">
             <p className="text-3xl font-semibold text-BaseFont">Free Crypto Tax Calculator Australia</p>
             <div className="w-full md:w-[90%] flex flex-col p-4 mt-4">
                 <div className="w-full flex flex-col md:flex-row gap-6">
