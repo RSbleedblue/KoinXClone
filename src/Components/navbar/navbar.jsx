@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='flex w-full justify-center items-center shadow-sm bg-white p-6'>
+            <div className='flex w-full justify-center items-center shadow-sm bg-white p-4'>
                 <div className='w-full max-w-screen-xl flex justify-between items-center'>
                     <img src={logo} className='h-6'/>
                     <div className='flex items-center gap-10'>

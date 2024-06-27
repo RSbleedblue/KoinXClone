@@ -55,7 +55,7 @@ const TaxInputs = () => {
 
     return (
         <>
-            <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[90px] mt-6 transition-all">
+            <div className="w-full flex flex-col md:flex-row gap-6 md:gap-[90px] mt-2 transition-all">
                 <div className="flex flex-col gap-2 w-full md:w-[40%]">
                     <p className="text-sm">Enter purchase price of Crypto</p>
                     <div className="w-full p-2 bg-BaseGray text-lg flex items-center gap-2 rounded-lg">
